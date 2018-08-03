@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 
-from distutils.core import setup
+import setuptools
 
-setup(
+with open("README.md", "r") as fh:
+        long_description = fh.read()
+
+setuptools.setup(
     name='memeIt',
     version='1.0',
     description='Outputs args as different memes',
     author='Jeff Schwanebeck',
     author_email='jschwanebeck@tuta.io',
-    packages=['memeIt'],
-    install_requires=['sys', 'argparse'],
+    packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )
