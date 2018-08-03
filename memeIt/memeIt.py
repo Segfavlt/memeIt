@@ -10,10 +10,8 @@ class damnitAction(argparse.Action):
         print("```")
         print(" ".join(st))
         for (index,letter) in enumerate(st[1:],0):
-                # add space to each letter to fix formatting
-                letter += " "
                 # twice the index b/c of the characters in between
-                print((letter+(" "*(index*2)))+letter)
+                print('{0} {1}{0}'.format(letter,' '*2*index))
         print("```")
 
 
