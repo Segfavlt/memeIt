@@ -12,6 +12,11 @@ setuptools.setup(
     author='Jeff Schwanebeck',
     author_email='jschwanebeck@tuta.io',
     packages=setuptools.find_packages(),
+    entry_points={
+        'console_scripts': [
+            'memeIt = memeIt.command_line:main'
+        ],
+    },
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
