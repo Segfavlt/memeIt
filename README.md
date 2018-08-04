@@ -2,8 +2,8 @@
   Python script for different meme text formatting
 
 ## Quickstart
-  1. python setup.py build 
-  2. python setup.py install 
+  1. `$ python setup.py build `
+  2. `# python setup.py install` || `$ python setup.py install --user`  
 
 ## Formats
   * SpongeBob Mocking meme
