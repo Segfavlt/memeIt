@@ -1,4 +1,4 @@
-import memeIt
+from memeIt import memeIt
 
 def main():
-    memeIt.main()
+    memeIt.MemeIt().run()
