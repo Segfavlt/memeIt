@@ -8,3 +8,5 @@
 ## Formats
   * SpongeBob Mocking meme
   * DAMNIT <arg> box
+  * loss
+  * Corrupted Vor's monologue
