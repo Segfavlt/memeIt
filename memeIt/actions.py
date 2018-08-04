@@ -25,3 +25,8 @@ class spongeBobAction(argparse.Action):
             else:
                 meme += letters[i]
         print(meme)
+
+class lossAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string='-l'):
+        print('|   ||')
+        print('||  |_')

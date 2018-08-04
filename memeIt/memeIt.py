@@ -11,6 +11,8 @@ def main():
             help='Prints the damnit box')
     parser.add_argument('-s', '--spongebob', nargs='*',
             action=actions.spongeBobAction, help='Prints the spongebob mocking meme')
+    parser.add_argument('-l', '--loss', nargs=0, action=actions.lossAction,
+            help='Prints loss')
     parser.parse_args()
 
     
