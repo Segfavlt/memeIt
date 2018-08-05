@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name='memeIt',
-    version='1.1',
+    version='1.0',
     description='Outputs args as different memes',
     author='Jeff Schwanebeck',
     author_email='jschwanebeck@tuta.io',

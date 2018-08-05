@@ -2,9 +2,10 @@
 import sys
 import argparse
 
+version = 1.0
 
 class VorAction(argparse.Action):
-    def __call__(self, parser, namespace, values, option_string='-v'):
+    def __call__(self, parser, namespace, Values, option_string='-V'):
         print('''Look at them, they come to this place when they know they are 
 not pure. Tenno use the keys, but they are mere trespassers. Only I, 
 Vor, know the true power of the Void. I was cut in half, destroyed, 
@@ -52,11 +53,14 @@ class LossAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-l'):
         print('|   ||\n||  |_')
 
-
+class VersionAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string='-v'):
+        print(version)
 
 class MemeIt():
     def __init__(self):
         self.__setattr__(__name__, 'main')
+        self.version = version
         
         
 
@@ -67,8 +71,10 @@ class MemeIt():
         parser.add_argument('-s', '--spongebob', nargs='*',
                 action=SpongeBobAction, help='Prints the spongebob mocking meme')
         parser.add_argument('-l', '--loss', nargs=0, action=LossAction, help='Prints loss')
-        parser.add_argument('-v', '--vor', nargs=0, action=VorAction,
+        parser.add_argument('-V', '--vor', nargs=0, action=VorAction,
         help='Prints corrupted Vor\'s monologue')
+        parser.add_argument('-v', '--version', nargs=0, action=VersionAction, 
+                help='Prints the version of the software')
         parser.parse_args()
 
 if __name__ == '__main__':
