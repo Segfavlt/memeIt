@@ -57,6 +57,10 @@ class VersionAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-v'):
         print(version)
 
+class FuckAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string='-v'):
+        print('fucking fuckity fuck'.upper())
+
 class MemeIt():
     def __init__(self):
         self.__setattr__(__name__, 'main')
@@ -75,6 +79,8 @@ class MemeIt():
         help='Prints corrupted Vor\'s monologue')
         parser.add_argument('-v', '--version', nargs=0, action=VersionAction, 
                 help='Prints the version of the software')
+        parser.add_argument('-f', '--fuck', nargs=0, action=FuckAction, 
+                help='Prints fucking meme') 
         parser.parse_args()
 
 if __name__ == '__main__':
