@@ -12,6 +12,7 @@ setuptools.setup(
     author='Jeff Schwanebeck',
     author_email='jschwanebeck@tuta.io',
     packages=setuptools.find_packages(),
+    license='MIT',
     entry_points={
         'console_scripts': [
             'memeIt = memeIt.command_line:main'
