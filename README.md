@@ -5,8 +5,7 @@
   * `#apt-get install python3-setuputils`
 
 ## Quickstart
-  1. `$ python3 setup.py build `
-  2. `# python3 setup.py install` || `$ python3 setup.py install --user`  
+  1. `$ ./install.sh ``
 
 ## Formats
   * SpongeBob Mocking meme
