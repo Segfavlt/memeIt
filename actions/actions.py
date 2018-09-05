@@ -3,7 +3,6 @@ import memeIt
 
 class DamnitAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-d'):
-        st  = "damnit " + values
         st = st.upper()
         print("```")
         print(" ".join(st))
