@@ -3,7 +3,10 @@ import memeIt
 
 class DamnitAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-d'):
-        st = st.upper()
+        st = ''
+        for value in values:
+            st = value.upper()
+            st += ' '
         print("```")
         print(" ".join(st))
         for (index,letter) in enumerate(st[1:],0):
