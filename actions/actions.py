@@ -5,12 +5,6 @@ class DamnitAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-d'):
         st  = "damnit " + values
         st = st.upper()
-        print("```")
-        print(" ".join(st))
-        for (index,letter) in enumerate(st[1:],0):
-                # twice the index b/c of the characters in between
-                print('{0} {1}{0}'.format(letter,' '*2*index))
-        print("```")
 
 
 class VorAction(argparse.Action):
@@ -33,7 +27,14 @@ and they will resist. But I, Vor, will cleanse this place of their
 impurity.''')
 
 
-
+class TableAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string='-t'):
+        print("```")
+        print(" ".join(st))
+        for (index,letter) in enumerate(st[1:],0):
+                # twice the index b/c of the characters in between
+                print('{0} {1}{0}'.format(letter,' '*2*index))
+        print("```")
 
 class SpongeBobAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-s'):
