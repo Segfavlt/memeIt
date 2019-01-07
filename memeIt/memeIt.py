@@ -15,6 +15,8 @@ class MemeIt():
         parser = argparse.ArgumentParser()
         parser.add_argument('-d', '--damnit', nargs='?', action=DamnitAction,
                 help='Prints DAMNIT $arg')
+        parser.add_argument('-b', '--box', nargs='*', action=DamnitAction,
+                help='Prints meme box')
         parser.add_argument('-s', '--spongebob', nargs='*',
                 action=SpongeBobAction, help='Prints the spongebob mocking meme')
         parser.add_argument('-l', '--loss', nargs=0, action=LossAction, help='Prints loss')

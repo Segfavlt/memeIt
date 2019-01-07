@@ -5,7 +5,7 @@
   * `#apt-get install python3-setuputils`
 
 ## Quickstart
-  1. `$ ./install.sh ``
+  1. `$ ./install.sh `
 
 ## Formats
   * SpongeBob Mocking meme
