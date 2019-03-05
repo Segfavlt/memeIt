@@ -3,12 +3,14 @@ import memeIt
 
 class DamnitAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-d'):
-        st  = "damnit " + values
-        st = st.upper()
-
+        st = "damnit " 
+        for value in values:
+            st += value
+            st += " "
+        print(st.upper())
 
 class VorAction(argparse.Action):
-    def __call__(self, parser, namespace, Values, option_string='-V'):
+    def __call__(self, parser, namespace, values, option_string='-V'):
         print('''Look at them, they come to this place when they know they are 
 not pure. Tenno use the keys, but they are mere trespassers. Only I, 
 Vor, know the true power of the Void. I was cut in half, destroyed, 
@@ -27,8 +29,27 @@ and they will resist. But I, Vor, will cleanse this place of their
 impurity.''')
 
 
+
+class BoxAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string='-b'):
+        st = "damnit " 
+        for value in values:
+            st += value
+            st += " "
+        st = st.upper()
+        print("```")
+        print(" ".join(st))
+        for (index,letter) in enumerate(st[1:],0):
+                # twice the index b/c of the characters in between
+                print('{0} {1}{0}'.format(letter,' '*2*index))
+        print("```")
+
 class TableAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-t'):
+        st = ""
+        for value in values:
+            st += value
+            st = " "
         print("```")
         print(" ".join(st))
         for (index,letter) in enumerate(st[1:],0):

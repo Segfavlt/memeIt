@@ -13,10 +13,10 @@ class MemeIt():
 
     def run(self):
         parser = argparse.ArgumentParser()
-        parser.add_argument('-d', '--damnit', nargs='?', action=DamnitAction,
+        parser.add_argument('-d', '--damnit', nargs='*', action=DamnitAction,
                 help='Prints DAMNIT $arg')
-        parser.add_argument('-b', '--box', nargs='*', action=DamnitAction,
-                help='Prints meme box')
+        parser.add_argument('-b', '--box', nargs='*', action=BoxAction,
+                help='Prints a DAMNIT table')
         parser.add_argument('-s', '--spongebob', nargs='*',
                 action=SpongeBobAction, help='Prints the spongebob mocking meme')
         parser.add_argument('-l', '--loss', nargs=0, action=LossAction, help='Prints loss')
@@ -24,7 +24,7 @@ class MemeIt():
         help='Prints corrupted Vor\'s monologue')
         parser.add_argument('-f', '--fuck', nargs=0, action=FuckAction, 
                 help='Prints fucking meme') 
-        parser.add_argument('-t', '--table', nargs='?', action=TableAction,
+        parser.add_argument('-t', '--table', nargs='*', action=TableAction,
                 help="Tables the argument")
         parser.add_argument('-v', '--version', nargs=0, action=VersionAction, 
                 help='Prints the version of the software')
