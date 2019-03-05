@@ -24,7 +24,7 @@ class MemeIt():
         help='Prints corrupted Vor\'s monologue')
         parser.add_argument('-f', '--fuck', nargs=0, action=FuckAction, 
                 help='Prints fucking meme') 
-        parser.add_argument('-t', '--table', nargs='?' action=TableAction,
+        parser.add_argument('-t', '--table', nargs='?', action=TableAction,
                 help="Tables the argument")
         parser.add_argument('-v', '--version', nargs=0, action=VersionAction, 
                 help='Prints the version of the software')
