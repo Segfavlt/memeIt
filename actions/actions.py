@@ -47,7 +47,6 @@ class BoxAction(argparse.Action):
 class TableAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-t'):
         st = ""
-        print(values)
         for value in values:
             st += value
             st += " "
