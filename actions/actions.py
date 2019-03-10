@@ -48,8 +48,8 @@ class TableAction(argparse.Action):
     def __call__(self, parser, namespace, values, option_string='-t'):
         st = ""
         for value in values:
-            st += value
-            st += " "
+            st += value.upper()
+            #st += " "
         print("```")
         print(" ".join(st))
         for (index,letter) in enumerate(st[1:],0):
